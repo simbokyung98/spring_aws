@@ -1,0 +1,42 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'spring'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // 스프링부트
+    compile('org.springframework.boot:spring-boot-starter-web')
+    // 타임리프
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    // Jpa : 관계형 데이베이스 제공
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    // 롬복 : get , set 메소드 , 생성자
+    compile('org.projectlombok:lombok')
+    // H2 : 인메모리 DB 관리 시스템
+    compile('com.h2database:h2')
+
+
+
+
+}

@@ -25,19 +25,29 @@ repositories {
 }
 
 dependencies {
-    // 스프링부트
-    compile('org.springframework.boot:spring-boot-starter-web')
-    // 타임리프
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-    // Jpa : 관계형 데이베이스 제공
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    // 롬복 : get , set 메소드 , 생성자
-    compile('org.projectlombok:lombok')
-    annotationProcessor('org.projectlombok:lombok')
-    testAnnotationProcessor('org.projectlombok:lombok')
+    // 스프링웹 설치
 
-    // H2 : 인메모리 DB 관리 시스템
-    compile('com.h2database:h2')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // 타임리프 설치
+
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // jpa 설치
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // 롬북 설치
+
+    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // h2 설치
+
+    runtimeOnly 'com.h2database:h2'
+
+
     //마리아db
     compile('org.mariadb.jdbc:mariadb-java-client')
 

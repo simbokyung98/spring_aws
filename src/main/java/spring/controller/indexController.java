@@ -17,4 +17,25 @@ public class indexController {
 
         return "index";
     }
+
+    @GetMapping("/index")
+    public String reindex(){
+
+        return "index";
+    }
+    @GetMapping("/about")
+    public String about(){
+
+        return "index";
+    }
+    @GetMapping("/post")
+    public String post(){
+
+        return "post";
+    }
+    @GetMapping("/contact")
+    public String contact(){
+
+        return "contact";
+    }
 }
